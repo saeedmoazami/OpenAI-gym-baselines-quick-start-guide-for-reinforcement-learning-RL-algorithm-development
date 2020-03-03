@@ -34,16 +34,18 @@
 </li>
 </ul>
 <p>Run this code in your jupyeter notebook:</p>
-<p style="text-align: justify;">``` Shell<br />$ pip install gym<br />```</p>
+``` Shell
+$ pip install gym
+```
 <p style="text-align: justify;">This installs everything you need to start developing a basic reinforcement learning algorithm.</p>
 <ul style="list-style-type: circle;">
 <li><strong>reinforcement learning algorithm structures using OpenAI:</strong></li>
 </ul>
 <p style="text-align: justify;">In order to develop and test your deep reinforcement learning algorithms, you will need to build artificial neural networks using a python library such as Keras, TensorFlow, or PyTorch:</p>
+
 ``` Shell
 pip install keras
 pip install tensorflow tensorflow==1.15
-
 ```
 Please avoid installing tensorflow 2.X at this point.
 You can refer to tensorflow installation guide for more information:
