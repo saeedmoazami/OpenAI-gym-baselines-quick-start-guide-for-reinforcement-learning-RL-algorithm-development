@@ -1,57 +1,50 @@
-OpenAI (gym, baselines) quick start guide for reinforcement learning algorithm development
-
-This document provides the first required steps for getting everything ready to research in reinforcement learning using OpenAI gym simulation environments and PyBullet physics engines. The are a few things that should be noted:
-
-The aim of this repository is to save the initial time students spend to start working on reinforcement learning.
-You can NOT learn reinforcement learning here, it has been assumed that you have some level of familiarity with reinforcement learning and want to use this document to start tools that require to implement algorithms quickly.
-This document has been provided as part of my teaching assistant responsibilities for the machine learning course at Lamar University, instructed by Prof. P. Doerschuk.
-
-Please feel free to contact me (moazami.iut@gmail.com) if you have any questions.
-
-
-
-Python installation:
-I highly recommend the installation of the latest python version using anaconda distribution:
-
-www.anaconda.com/distribution/
-
-please make sure to download the correct version selecting the appropriate operating system and python 3.X version. You can go through installation steps using the instructed proved by anaconda:
-
-docs.anaconda.com/anaconda/install/
-
- 
-
-Run jupyter notebook after installation. It will open a browser.
-
-
-
-You can start writing your python cone in jupyter now. Direct to a directory and create a new python3 file.
-
-You also can see other installed tools through anaconda navigator installed on your system.
-
-
-
- 
-
-OpenAI gym installation
-Basicinstallation:
-Run this code in your jupyeter notebook:
-
-``` Shell
-$ pip install gym
-```
-
-This installs everything you need to start developing a basic reinforcement learning algorithm.
-
-reinforcement learning algorithm structures using OpenAI:
-In order to develop and test your deep reinforcement learning algorithms, you will need to build artificial neural networks using a python library such as Keras, TensorFlow, or PyTorch:
-
+<h1 style="text-align: justify;">OpenAI (gym, baselines) quick start guide for reinforcement learning algorithm development</h1>
+<p style="text-align: justify;"><br />This document provides the first required steps for getting everything ready to research in reinforcement learning using OpenAI gym simulation environments and PyBullet physics engines. The are a few things that should be noted:</p>
+<ul style="text-align: justify;">
+<li>The aim of this repository is to save the initial time students spend to start working on reinforcement learning.</li>
+<li>You can NOT learn reinforcement learning here, it has been assumed that you have some level of familiarity with&nbsp;reinforcement learning and want to use this document to start tools that require to implement algorithms quickly.</li>
+</ul>
+<p style="text-align: justify;">This document has been provided as part of my teaching assistant responsibilities for the machine learning course at Lamar University, instructed by Prof. P. Doerschuk.</p>
+<p style="text-align: justify;">Please feel free to contact me (<a href="mailto:moazami.iut@gmail.com">moazami.iut@gmail.com</a>) if you have any questions.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<ul style="text-align: justify;">
+<li>
+<h2><strong>Python installation:</strong></h2>
+</li>
+</ul>
+<p style="text-align: justify;">I highly recommend the installation of the latest python version using anaconda distribution:</p>
+<p style="text-align: justify;"><a href="http://www.anaconda.com/distribution/">www.anaconda.com/distribution/</a></p>
+<p style="text-align: justify;">please make sure to download the correct version selecting the appropriate operating system and python 3.X version. You can go through installation steps using the instructed proved by anaconda:</p>
+<p style="text-align: justify;"><a href="https://docs.anaconda.com/anaconda/install/">docs.anaconda.com/anaconda/install/</a></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Run jupyter notebook after installation. It will open a browser.</p>
+<p style="text-align: justify;"><img src="https://github.com/saeedmoazami/OpenAI-gym-baselines-quick-start-guide-for-reinforcement-learning-RL-algorithm-development/blob/master/Jupyter_Notebook.png" alt="Jupyter_Notebook" width="300" height="38" /></p>
+<p style="text-align: justify;">You can start writing your python cone in jupyter now. Direct to a directory and create a new python3 file.</p>
+<p style="text-align: justify;">You also can see other installed tools through anaconda navigator installed on your system.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<ul style="text-align: justify;">
+<li>
+<h2><strong>OpenAI gym installation</strong></h2>
+</li>
+</ul>
+<ul style="list-style-type: circle;">
+<li>
+<h3>Basicinstallation:</h3>
+</li>
+</ul>
+<p>Run this code in your jupyeter notebook:</p>
+<p style="text-align: justify;">``` Shell<br />$ pip install gym<br />```</p>
+<p style="text-align: justify;">This installs everything you need to start developing a basic reinforcement learning algorithm.</p>
+<ul style="list-style-type: circle;">
+<li><strong>reinforcement learning algorithm structures using OpenAI:</strong></li>
+</ul>
+<p style="text-align: justify;">In order to develop and test your deep reinforcement learning algorithms, you will need to build artificial neural networks using a python library such as Keras, TensorFlow, or PyTorch:</p>
 ``` Shell
 pip install keras
 pip install tensorflow tensorflow==1.15
 
 ```
-
 Please avoid installing tensorflow 2.X at this point.
 You can refer to tensorflow installation guide for more information:
 tensorflow.org/install/pip
