@@ -67,3 +67,8 @@ for episode in range(n_episodes): # This is the total number of episodes loop
             
             break    
 ```
+
+``` Shell
+$ pip install gym
+```
+
