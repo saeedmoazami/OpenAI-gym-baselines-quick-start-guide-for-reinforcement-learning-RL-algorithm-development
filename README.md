@@ -18,7 +18,7 @@
 <p style="text-align: justify;"><a href="https://docs.anaconda.com/anaconda/install/">docs.anaconda.com/anaconda/install/</a></p>
 <p style="text-align: justify;">&nbsp;</p>
 <p style="text-align: justify;">Run jupyter notebook after installation. It will open a browser.</p>
-<p style="text-align: justify;"><img src="https://github.com/saeedmoazami/OpenAI-gym-baselines-quick-start-guide-for-reinforcement-learning-RL-algorithm-development/blob/master/Jupyter_Notebook.png" alt="Jupyter_Notebook" width="300" height="38" /></p>
+
 <p style="text-align: justify;">You can start writing your python cone in jupyter now. Direct to a directory and create a new python3 file.</p>
 <p style="text-align: justify;">You also can see other installed tools through anaconda navigator installed on your system.</p>
 <p style="text-align: justify;">&nbsp;</p>
@@ -34,9 +34,11 @@
 </li>
 </ul>
 <p>Run this code in your jupyeter notebook:</p>
+
 ``` Shell
 $ pip install gym
 ```
+
 <p style="text-align: justify;">This installs everything you need to start developing a basic reinforcement learning algorithm.</p>
 <ul style="list-style-type: circle;">
 <li><strong>reinforcement learning algorithm structures using OpenAI:</strong></li>
