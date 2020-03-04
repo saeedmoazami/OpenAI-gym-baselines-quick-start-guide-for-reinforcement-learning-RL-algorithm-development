@@ -136,18 +136,21 @@ $ conda create -n NewEnv
 <p>You can list all available environments using:</p>
 
 ``` Shell
-$ conda info &ndash;-envs
+$ conda info --envs
 ```
 
 <p>Activate the created environments using :</p>
+
 ``` Shell
 $ source activate NewEnv
 ```
 <p>Or</p>
+
 ``` Shell
 $ conda activate NewEnv
 ```
 <p>Then install python and TensorFlowfor your environment</p>
+
 ``` Shell
 conda install python=3.6
 $ pip install tensorflow==1.14
@@ -159,6 +162,7 @@ import tensorfflow as tf
 print(tf.__version__)
 ```
 <p>The following libraries are required for gym and baselines toi run properly:</p>
+
 ``` Shell
 conda install python=3.6
 $ pip install pystan
@@ -166,13 +170,12 @@ $ pip install joblib
 $ pip install click
 $ pip install tqdm
 ```
-
 <p>Finally run the following code to see if everything works properly:</p>
+
 ``` Shell
 conda install python=3.6
 $ python baselines/deepq/experiments/train_cartpole.py
 ```
-
 <p>To see rendering envs (or any graphical windows from remove computer) you will need to install x11:</p>
 <p>Download and install xming using this link and make sure that it is running in your computer before connecting</p>
 <p><a href="https://sourceforge.net/projects/xming/">https://sourceforge.net/projects/xming/</a></p>
@@ -197,15 +200,18 @@ $ python baselines/deepq/experiments/train_cartpole.py
 <p>A C++ compiler is needed to be installed. You can find the &ldquo;community&rdquo; version from the following:</p>
 <p><a href="https://visualstudio.microsoft.com/downloads/">visualstudio.microsoft.com/downloads/</a></p>
 <p>run Anaconda Power Shell, on your machine</p>
+
 ``` Shell
 $ conda create -n NewEnv
 ```
 <p>please select a convenient name for NewEnv</p>
 <p>you can list all environments using:</p>
+
 ``` Shell
 $ conda&nbsp;info --envs
 ```
 <p>activate the environment you have created:</p>
+
 ``` Shell
 $ conda activate NewEnv
 ```
@@ -214,16 +220,19 @@ $ conda activate NewEnv
 $ conda install git
 ```
 <p>Follow the following:</p>
+
 ``` Shell
 $ pip install git+https://github.com/Kojoley/atari-py.git
 ```
 <p>You can use pip install gym, or clone to inspect the source code</p>
+
 ``` Shell
 $ git clone https://github.com/openai/gym.git
 cd gym
 pip install -e .
 ```
 <p>These are required libraries. They are not required for all environments BTW:</p>
+
 ``` Shell
 $ conda install pystan
 $ pip install joblib
@@ -231,16 +240,19 @@ $ pip install click
 $ pip install tqdm
 ```
 <p>Install the baselines:</p>
+
 ``` Shell
 $ git clone https://github.com/openai/baselines.git
 $ cd baseline
 $ pip install -e .
 ```
 <p> After finishing the installation, you can use the following commands to run baselines algorithms.To train a cartpole using DQN, run </p>
+
 ``` Shell
 $ python baselines/deepq/experiments/train_cartpole.py
 ```
 <p>To see a trained cartpole run:</p>
+
 ``` Shell
 $ python baselines/deepq/experiments/enjoy_cartpole.py
 ```
@@ -248,11 +260,14 @@ $ python baselines/deepq/experiments/enjoy_cartpole.py
 <p><a href="https://arztsamuel.github.io/en/blogs/2018/Gym-and-Baselines-on-Windows.html">arztsamuel.github.io/en/blogs/2018/Gym-and-Baselines-on-Windows.html</a></p>
 <p>Please ignore any errors at this point. Specifically errors related to MuJoCo. MuJoCo is a library for multibody dynamics analysis that is NOT FREE. You will not need to use it now. A limited free license is available for students here, but I recommend using the free license when you are ready to implement codes on continuous state-action spaces. You can find more information here:<a href="http://www.mujoco.org/">http://www.mujoco.org/</a>Also, Pybyllet is a great FREE library that you can use after becoming more proficient in reinforcement learning.<a href="https://pybullet.org/wordpress/">pybullet.org/wordpress/</a></p>
 <p>Running baseline:</p>
+
 <p>OpenAI baselines provides an interface to run different algorithms using different setting:</p>
+
 ``` Shell
 $ python -m baselines.run --alg=&lt;name of the algorithm&gt; --env=&lt;environment_id&gt; [additional arguments]
 ```
 <p>Here are some examples:</p>
+
 ``` Shell
 $ python -m baselines.run --alg=deepq --env=CartPole-v1 --network=mlp --num_timesteps=5e6 --num_hidden=32&nbsp; --save_path=~/models/deepq5e6_01 --log_path=~/logs/deepq5e6_01/ --lr=1e-3&nbsp; --buffer_size=50000 --seed=0</p>
 ```
