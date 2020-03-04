@@ -131,7 +131,7 @@ $ module load anaconda3/3.7
 <p>Please note that you need to type module add ana.. then use Tab key to auto complete the rest</p>
 
 ``` Shell
-$ conda create -n NewEnv;
+$ conda create -n NewEnv
 ```
 <p>You can list all available environments using:</p>
 ``` Shell
