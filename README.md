@@ -113,3 +113,112 @@ for episode in range(n_episodes): # This is the total number of episodes loop
             
             break    
 ```
+
+<ul>
+<li>
+<h2><strong>Setup on a remote machine :</strong></h2>
+</li>
+</ul>
+<p>This section is based on lamar university&rsquo;s cluster computer but general instructions can be used in other settings too.</p>
+<p>You need to arrange with the computer science department in order to access the cluster computer</p>
+<p>Once you loged in:</p>
+<p><img src="https://github.com/saeedmoazami/OpenAI-gym-baselines-quick-start-guide-for-reinforcement-learning-RL-algorithm-development/blob/master/power%20shell.png" alt="" /></p>
+``` Shell
+$ module load anaconda3/3.7
+```
+<p>Please note that you need to type module add ana.. then use Tab to auto complete the rest</p>
+``` Shell
+$ conda create -n &lt;NewEnv&gt;
+```
+<p>You can list all available environments using:</p>
+``` Shell
+$ conda info &ndash;-envs
+```
+<p>Activate the created environments using :</p>
+``` Shell
+$ source activate NewEnv
+```
+<p>Or</p>
+``` Shell
+$ conda activate NewEnv
+```
+``` Shellconda install python=3.6</p>
+<p>~]$ pip install tensorflow==1.14</p>
+<p>To verify the installation, run</p>
+<p>python</p>
+<p>then:</p>
+<p>import tensorfflow as tf</p>
+<p>print(tf.__version__)</p>
+<p>1.14.0</p>
+<p>&nbsp;</p>
+<p>conda install pystan</p>
+<p>Pip install joblib</p>
+<p>Pip install click</p>
+<p>Pip install tqdm</p>
+<p>&nbsp;</p>
+<p>Finally run the following code to see if everything works properly:</p>
+<p>python baselines/deepq/experiments/train_cartpole.py</p>
+<p>To see rendering envs (or any graphic input from remove computer) you will need to install x11:</p>
+<p>&nbsp;</p>
+<p>Download and install xming from:</p>
+<p><a href="https://sourceforge.net/projects/xming/">https://sourceforge.net/projects/xming/</a></p>
+
+
+
+<p><strong>Advanced installation:</strong></p>
+<p>Up to this point you have anything you need to do simple projects in reinforcement learning, But, iF you need to go deeper in reinforcement learning you can follow the following:</p>
+<p><strong>OpenAI Baselines:</strong></p>
+<p>OpenAI baselines is a set of high-quality standardized algorithms in reinforcement learning developed by OpenAI to provide a baseline for newly developed algorithms to be compared with.</p>
+<p>To install baselines, you can follow this instruction:</p>
+<p>You will need to Install anaconda as it is explained in the previous section.</p>
+<p>A C++ compiler is needed to be installed. You can find the &ldquo;community&rdquo; version from the following:</p>
+<p><a href="https://visualstudio.microsoft.com/downloads/">visualstudio.microsoft.com/downloads/</a></p>
+<p>&nbsp;</p>
+<p>run Anaconda Power Shell, on your machine</p>
+<p>create a new environment using the following:</p>
+<p>conda create -n &lt;NewEnv&gt;</p>
+<p>please select a convenient name for &lt;NewEnv&gt;</p>
+<p>you can list all environments using:</p>
+<table width="620">
+<tbody>
+<tr>
+<td>
+<p><strong>conda&nbsp;info --envs</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>activate the environment you have created:</p>
+<p>conda activate &lt;NewEnv&gt; Install gitconda install git</p>
+<p>Follow the following:</p>
+<p>&nbsp;</p>
+<p>&gt; pip install git+https://github.com/Kojoley/atari-py.gitYou can use pip install gym, or clone to inspect the source code:&gt; git clone https://github.com/openai/gym.git&gt; cd gym&gt; pip install -e .These are required libraries. They are not required for all environments BTW:</p>
+<p>conda install pystan</p>
+<p>Pip install joblib</p>
+<p>Pip install click</p>
+<p>Pip install tqdm</p>
+<p>&nbsp;</p>
+<p>Install the baselines:</p>
+<p>&gt; git clone https://github.com/openai/baselines.git&gt; cd baselines&gt; pip install -e .&nbsp;After finishing the installation, you can use the following commands to run baselines&rsquo; algorithms.To train a cartpole using DQN, run:&gt; python baselines/deepq/experiments/train_cartpole.pyTo see a trained cartpole run:&gt; python baselines/deepq/experiments/enjoy_cartpole.py&nbsp;</p>
+<p>Please refer to the following for the detailed explanation:</p>
+<p>&nbsp;</p>
+<p><a href="https://arztsamuel.github.io/en/blogs/2018/Gym-and-Baselines-on-Windows.html">arztsamuel.github.io/en/blogs/2018/Gym-and-Baselines-on-Windows.html</a></p>
+<p>Please ignore any errors at this point. Specifically errors related to MuJoCo. MuJoCo is a library for multibody dynamics analysis that is NOT FREE. You will not need to use it now. A limited free license is available for students here, but I recommend using the free license when you are ready to implement codes on continuous state-action spaces. You can find more information here:<a href="http://www.mujoco.org/">http://www.mujoco.org/</a>Also, Pybyllet is a great FREE library that you can use after becoming more proficient in reinforcement learning.<a href="https://pybullet.org/wordpress/">pybullet.org/wordpress/</a></p>
+<p>&nbsp;</p>
+<p>Running baseline:</p>
+<p>OpenAI baselines provide an interface to run different algorithms using different setting:</p>
+<p>python -m baselines.run --alg=&lt;name of the algorithm&gt; --env=&lt;environment_id&gt; [additional arguments]</p>
+<p>&nbsp;</p>
+<p>Here are some examples:</p>
+<p>python -m baselines.run --alg=deepq --env=CartPole-v1 --network=mlp --num_timesteps=5e6 --num_hidden=32&nbsp; --save_path=~/models/deepq5e6_01 --log_path=~/logs/deepq5e6_01/ --lr=1e-3&nbsp; --buffer_size=50000 --seed=0</p>
+<p>&nbsp;</p>
+<p>This command, runs trains an DQN (deepq) agent, on CartPole-v1 environment. The structure of the network will be mlp(multi layer perceptron), the algorithm wili be run for 5e6 time steps, number of hidden nodes of mlp is 32, saves the model (the agent&rsquo;s model) in save path, logs the results on log_path, uses learning rate 1e-3, and replay buffer size 5000, and random seed 0.</p>
+<p>&nbsp;</p>
+<p>You should be familiar with DQN before understanding most of these terms.</p>
+<p>You can refer to this documents for Saving the mode, Logging, and visyualizing the results:</p>
+<p><a href="https://github.com/openai/baselines">https://github.com/openai/baselines</a></p>
+<p>and here for visualization:</p>
+<p><a href="https://github.com/openai/baselines/blob/master/docs/viz/viz.ipynb">https://github.com/openai/baselines/blob/master/docs/viz/viz.ipynb</a></p>
+
+
