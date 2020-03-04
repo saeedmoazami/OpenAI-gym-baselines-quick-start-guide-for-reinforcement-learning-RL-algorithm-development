@@ -129,8 +129,9 @@ for episode in range(n_episodes): # This is the total number of episodes loop
 $ module load anaconda3/3.7
 ```
 <p>Please note that you need to type module add ana.. then use Tab key to auto complete the rest</p>
+
 ``` Shell
-$ conda create -n &lt;NewEnv&gt;
+$ conda create -n NewEnv;
 ```
 <p>You can list all available environments using:</p>
 ``` Shell
@@ -193,43 +194,67 @@ $ python baselines/deepq/experiments/train_cartpole.py
 <p>You will need to install anaconda as it is explained in the previous section.</p>
 <p>A C++ compiler is needed to be installed. You can find the &ldquo;community&rdquo; version from the following:</p>
 <p><a href="https://visualstudio.microsoft.com/downloads/">visualstudio.microsoft.com/downloads/</a></p>
-<p>&nbsp;</p>
 <p>run Anaconda Power Shell, on your machine</p>
-
 ``` Shell
-$ conda create -n &lt;NewEnv&gt;
+$ conda create -n NewEnv
 ```
-<p>please select a convenient name for &lt;NewEnv&gt;</p>
+<p>please select a convenient name for NewEnv</p>
 <p>you can list all environments using:</p>
 ``` Shell
 $ conda&nbsp;info --envs
 ```
 <p>activate the environment you have created:</p>
-<p>conda activate &lt;NewEnv&gt; Install gitconda install git</p>
+``` Shell
+$ conda activate NewEnv
+```
+<p>Install git</p>
+``` Shell
+$ conda install git
+```
 <p>Follow the following:</p>
-<p>&nbsp;</p>
-<p>&gt; pip install git+https://github.com/Kojoley/atari-py.gitYou can use pip install gym, or clone to inspect the source code:&gt; git clone https://github.com/openai/gym.git&gt; cd gym&gt; pip install -e .These are required libraries. They are not required for all environments BTW:</p>
-<p>conda install pystan</p>
-<p>Pip install joblib</p>
-<p>Pip install click</p>
-<p>Pip install tqdm</p>
-<p>&nbsp;</p>
+``` Shell
+$ pip install git+https://github.com/Kojoley/atari-py.git
+```
+<p>You can use pip install gym, or clone to inspect the source code</p>
+``` Shell
+$ git clone https://github.com/openai/gym.git
+cd gym
+pip install -e .
+```
+<p>These are required libraries. They are not required for all environments BTW:</p>
+``` Shell
+$ conda install pystan
+$ pip install joblib
+$ pip install click
+$ pip install tqdm
+```
 <p>Install the baselines:</p>
-<p>&gt; git clone https://github.com/openai/baselines.git&gt; cd baselines&gt; pip install -e .&nbsp;After finishing the installation, you can use the following commands to run baselines&rsquo; algorithms.To train a cartpole using DQN, run:&gt; python baselines/deepq/experiments/train_cartpole.pyTo see a trained cartpole run:&gt; python baselines/deepq/experiments/enjoy_cartpole.py&nbsp;</p>
+``` Shell
+$ git clone https://github.com/openai/baselines.git
+$ cd baseline
+$ pip install -e .
+```
+<p> After finishing the installation, you can use the following commands to run baselines algorithms.To train a cartpole using DQN, run </p>
+``` Shell
+$ python baselines/deepq/experiments/train_cartpole.py
+```
+<p>To see a trained cartpole run:</p>
+``` Shell
+$ python baselines/deepq/experiments/enjoy_cartpole.py
+```
 <p>Please refer to the following for the detailed explanation:</p>
-<p>&nbsp;</p>
 <p><a href="https://arztsamuel.github.io/en/blogs/2018/Gym-and-Baselines-on-Windows.html">arztsamuel.github.io/en/blogs/2018/Gym-and-Baselines-on-Windows.html</a></p>
 <p>Please ignore any errors at this point. Specifically errors related to MuJoCo. MuJoCo is a library for multibody dynamics analysis that is NOT FREE. You will not need to use it now. A limited free license is available for students here, but I recommend using the free license when you are ready to implement codes on continuous state-action spaces. You can find more information here:<a href="http://www.mujoco.org/">http://www.mujoco.org/</a>Also, Pybyllet is a great FREE library that you can use after becoming more proficient in reinforcement learning.<a href="https://pybullet.org/wordpress/">pybullet.org/wordpress/</a></p>
-<p>&nbsp;</p>
 <p>Running baseline:</p>
-<p>OpenAI baselines provide an interface to run different algorithms using different setting:</p>
-<p>python -m baselines.run --alg=&lt;name of the algorithm&gt; --env=&lt;environment_id&gt; [additional arguments]</p>
-<p>&nbsp;</p>
+<p>OpenAI baselines provides an interface to run different algorithms using different setting:</p>
+``` Shell
+$ python -m baselines.run --alg=&lt;name of the algorithm&gt; --env=&lt;environment_id&gt; [additional arguments]
+```
 <p>Here are some examples:</p>
-<p>python -m baselines.run --alg=deepq --env=CartPole-v1 --network=mlp --num_timesteps=5e6 --num_hidden=32&nbsp; --save_path=~/models/deepq5e6_01 --log_path=~/logs/deepq5e6_01/ --lr=1e-3&nbsp; --buffer_size=50000 --seed=0</p>
-<p>&nbsp;</p>
+``` Shell
+$ python -m baselines.run --alg=deepq --env=CartPole-v1 --network=mlp --num_timesteps=5e6 --num_hidden=32&nbsp; --save_path=~/models/deepq5e6_01 --log_path=~/logs/deepq5e6_01/ --lr=1e-3&nbsp; --buffer_size=50000 --seed=0</p>
+```
 <p>This command, runs trains an DQN (deepq) agent, on CartPole-v1 environment. The structure of the network will be mlp(multi layer perceptron), the algorithm wili be run for 5e6 time steps, number of hidden nodes of mlp is 32, saves the model (the agent&rsquo;s model) in save path, logs the results on log_path, uses learning rate 1e-3, and replay buffer size 5000, and random seed 0.</p>
-<p>&nbsp;</p>
 <p>You should be familiar with DQN before understanding most of these terms.</p>
 <p>You can refer to this documents for Saving the mode, Logging, and visyualizing the results:</p>
 <p><a href="https://github.com/openai/baselines">https://github.com/openai/baselines</a></p>
