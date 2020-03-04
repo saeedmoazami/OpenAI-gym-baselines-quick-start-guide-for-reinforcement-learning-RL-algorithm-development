@@ -119,14 +119,16 @@ for episode in range(n_episodes): # This is the total number of episodes loop
 <h2><strong>Setup on a remote machine :</strong></h2>
 </li>
 </ul>
+
 <p>This section is based on lamar university&rsquo;s cluster computer but general instructions can be used in other settings too.</p>
 <p>You need to arrange with the computer science department in order to access the cluster computer</p>
 <p>Once you loged in:</p>
 <p><img src="https://github.com/saeedmoazami/OpenAI-gym-baselines-quick-start-guide-for-reinforcement-learning-RL-algorithm-development/blob/master/power%20shell.png" alt="" /></p>
+
 ``` Shell
 $ module load anaconda3/3.7
 ```
-<p>Please note that you need to type module add ana.. then use Tab to auto complete the rest</p>
+<p>Please note that you need to type module add ana.. then use Tab key to auto complete the rest</p>
 ``` Shell
 $ conda create -n &lt;NewEnv&gt;
 ```
@@ -142,53 +144,66 @@ $ source activate NewEnv
 ``` Shell
 $ conda activate NewEnv
 ```
-``` Shellconda install python=3.6</p>
-<p>~]$ pip install tensorflow==1.14</p>
-<p>To verify the installation, run</p>
-<p>python</p>
-<p>then:</p>
-<p>import tensorfflow as tf</p>
-<p>print(tf.__version__)</p>
-<p>1.14.0</p>
-<p>&nbsp;</p>
-<p>conda install pystan</p>
-<p>Pip install joblib</p>
-<p>Pip install click</p>
-<p>Pip install tqdm</p>
-<p>&nbsp;</p>
+<p>Then install python and TensorFlowfor your environment</p>
+``` Shell
+conda install python=3.6
+$ pip install tensorflow==1.14
+```
+<p>To verify the installation, run python, then use this code to check installation and verion (you should see 1.14.0) </p>
+
+``` Python
+import tensorfflow as tf
+print(tf.__version__)
+```
+<p>The following libraries are required for gym and baselines toi run properly:</p>
+``` Shell
+conda install python=3.6
+$ pip install pystan
+$ pip install joblib
+$ pip install click
+$ pip install tqdm
+```
+
 <p>Finally run the following code to see if everything works properly:</p>
-<p>python baselines/deepq/experiments/train_cartpole.py</p>
-<p>To see rendering envs (or any graphic input from remove computer) you will need to install x11:</p>
-<p>&nbsp;</p>
-<p>Download and install xming from:</p>
+``` Shell
+conda install python=3.6
+$ python baselines/deepq/experiments/train_cartpole.py
+```
+
+<p>To see rendering envs (or any graphical windows from remove computer) you will need to install x11:</p>
+<p>Download and install xming using this link and make sure that it is running in your computer before connecting</p>
 <p><a href="https://sourceforge.net/projects/xming/">https://sourceforge.net/projects/xming/</a></p>
 
+<ul style="text-align: justify;">
+<li>
+<h2><strong>Advanced installation:</strong></h2>
+</li>
+</ul>
 
+<p>Up to this point you have everything you need to do simple projects in reinforcement learning, But, if you need to go deeper you can follow the following steps:</p>
 
-<p><strong>Advanced installation:</strong></p>
-<p>Up to this point you have anything you need to do simple projects in reinforcement learning, But, iF you need to go deeper in reinforcement learning you can follow the following:</p>
-<p><strong>OpenAI Baselines:</strong></p>
+<ul style="list-style-type: circle;">
+<li>
+<h3>OpenAI Baselines:</h3>
+</li>
+</ul>
+
 <p>OpenAI baselines is a set of high-quality standardized algorithms in reinforcement learning developed by OpenAI to provide a baseline for newly developed algorithms to be compared with.</p>
 <p>To install baselines, you can follow this instruction:</p>
-<p>You will need to Install anaconda as it is explained in the previous section.</p>
+<p>You will need to install anaconda as it is explained in the previous section.</p>
 <p>A C++ compiler is needed to be installed. You can find the &ldquo;community&rdquo; version from the following:</p>
 <p><a href="https://visualstudio.microsoft.com/downloads/">visualstudio.microsoft.com/downloads/</a></p>
 <p>&nbsp;</p>
 <p>run Anaconda Power Shell, on your machine</p>
-<p>create a new environment using the following:</p>
-<p>conda create -n &lt;NewEnv&gt;</p>
+
+``` Shell
+$ conda create -n &lt;NewEnv&gt;
+```
 <p>please select a convenient name for &lt;NewEnv&gt;</p>
 <p>you can list all environments using:</p>
-<table width="620">
-<tbody>
-<tr>
-<td>
-<p><strong>conda&nbsp;info --envs</strong></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
+``` Shell
+$ conda&nbsp;info --envs
+```
 <p>activate the environment you have created:</p>
 <p>conda activate &lt;NewEnv&gt; Install gitconda install git</p>
 <p>Follow the following:</p>
