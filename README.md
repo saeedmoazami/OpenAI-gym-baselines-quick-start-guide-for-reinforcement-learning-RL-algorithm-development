@@ -128,15 +128,17 @@ for episode in range(n_episodes): # This is the total number of episodes loop
 ``` Shell
 $ module load anaconda3/3.7
 ```
-<p>Please note that you need to type module add ana.. then use Tab key to auto complete the rest</p>
+<p>Please note that you need to type module add ana.. then use Tab key to auto complete the rest </p>
 
 ``` Shell
 $ conda create -n NewEnv
 ```
 <p>You can list all available environments using:</p>
+
 ``` Shell
 $ conda info &ndash;-envs
 ```
+
 <p>Activate the created environments using :</p>
 ``` Shell
 $ source activate NewEnv
