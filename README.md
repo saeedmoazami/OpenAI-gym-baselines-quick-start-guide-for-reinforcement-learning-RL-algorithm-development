@@ -102,7 +102,7 @@ for episode in range(n_episodes): # This is the total number of episodes loop
 ```
 <p style="text-align: justify;">You can find a complete code with explanation <a href="https://towardsdatascience.com/getting-started-with-reinforcement-learning-and-open-ai-gym-c289aca874f">here</a>. It trains openAI gym MountainCar-v0 environment and provides the visualisazion after training.</p>
 
-<p style="text-align: justify;">And complete set of environments provided by OpenAI <a href="https://gym.openai.com/envs/#classic_control">here</a></p>
+<p style="text-align: justify;">And complete set of environments provided by OpenAI <a href="https://gym.openai.com/envs/#classic_control">here</a>.</p>
 
 <p style="text-align: justify;">In order to develop DEEP reinforcement learning algorithms, you will need to build artificial neural networks using a python library such as Keras, TensorFlow, or PyTorch:</p>
 
@@ -257,7 +257,7 @@ $ python -m baselines.run --alg= name_of_the_algorithm  --env=environment [addit
 <p>Here are some examples:</p>
 
 ``` Shell
-$ python -m baselines.run --alg=deepq --env=CartPole-v1 --network=mlp --num_timesteps=5e6 --num_hidden=32 --save_path=~/models/deepq5e6_01 --log_path=~/logs/deepq5e6_01/ --lr=1e-3&nbsp; --buffer_size=50000 --seed=0</p>
+$ python -m baselines.run --alg=deepq --env=CartPole-v1 --network=mlp --num_timesteps=5e6 --num_hidden=32 --save_path=~/models/deepq5e6_01 --log_path=~/logs/deepq5e6_01/ --lr=1e-3 --buffer_size=50000 --seed=0
 ```
 <p>This command trains an DQN (deepq) agent, on CartPole-v1 environment. The structure of the network will be mlp (multi layer perceptron), the algorithm will be run for 5e6 time steps, the number of hidden nodes of mlp is 32. It saves the model (the agent's model) in save path, logs the results on log_path, uses learning rate 1e-3, replay buffer size 50000, and random seed 0.</p>
 <p>You should be familiar with DQN before understanding most of these terms.</p>
