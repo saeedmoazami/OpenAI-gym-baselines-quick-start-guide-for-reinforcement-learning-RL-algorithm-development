@@ -13,7 +13,7 @@
 </ul>
 <p style="text-align: justify;">I highly recommend installing the latest python version using <a href="http://www.anaconda.com/distribution/">anaconda distribution</a></p>
 <p style="text-align: justify;">please make sure to download the correct version selecting the appropriate operating system and python 3.X version. You can go through installation steps using the instruction proved by anaconda.<a href="https://docs.anaconda.com/anaconda/install/">instruction proved by anaconda.</a></p>
-<p style="text-align: justify;">After installation, run jupyter notebook (It will open a browser.) You can start writing your python cone in jupyter now. Direct to a directory and create a new python3 file.</p>
+<p style="text-align: justify;">After installation, run jupyter notebook (It will open a browser.) You can start writing your python cone in jupyter now. Direct to a directory and create a new python3 file. <a href="http://maxmelnick.com/2016/04/19/python-beginner-tips-and-tricks.html">This page</a> provides useful notes on how to use Jupyter notebook</p>
 <p style="text-align: justify;">You also can see other installed tools through anaconda navigator installed on your system.</p>
 <ul style="text-align: justify;">
 <li>
