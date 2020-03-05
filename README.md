@@ -1,4 +1,4 @@
-<h1 style="text-align: center;"> OpenAI (gym, baselines) quick start guide for Reinforcement Learning algorithm development </h1>
+<h1 style="text-align: center;"> OpenAI (gym, baselines) quick start guide for Reinforcement Learning algorithm development.</h1>
 <p style="text-align: justify;"><br/>This document provides the initial steps required to research in reinforcement learning area using OpenAI gym simulation environments and PyBullet physics engines. The are a few things that should be noted:</p>
 <ul style="text-align: justify;">
 <li>This repository aims to save the initial time students spend to start working on reinforcement learning.</li>
@@ -13,7 +13,7 @@
 </ul>
 <p style="text-align: justify;">I highly recommend installing the latest python version using <a href="http://www.anaconda.com/distribution/">anaconda distribution</a></p>
 <p style="text-align: justify;">please make sure to download the correct version selecting the appropriate operating system and python 3.X version. You can go through installation steps using the instruction proved by anaconda.<a href="https://docs.anaconda.com/anaconda/install/">instruction proved by anaconda.</a></p>
-<p style="text-align: justify;">After installation, run jupyter notebook. It will open a browser. You can start writing your python cone in jupyter now. Direct to a directory and create a new python3 file.</p>
+<p style="text-align: justify;">After installation, run jupyter notebook (It will open a browser.) You can start writing your python cone in jupyter now. Direct to a directory and create a new python3 file.</p>
 <p style="text-align: justify;">You also can see other installed tools through anaconda navigator installed on your system.</p>
 <ul style="text-align: justify;">
 <li>
@@ -100,7 +100,11 @@ for episode in range(n_episodes): # This is the total number of episodes loop
             
             break    
 ```
-<p style="text-align: justify;">In order to develop and test your deep reinforcement learning algorithms, you will need to build artificial neural networks using a python library such as Keras, TensorFlow, or PyTorch:</p>
+<p style="text-align: justify;">You can find a complete code with explanation <a href="https://towardsdatascience.com/getting-started-with-reinforcement-learning-and-open-ai-gym-c289aca874f">here</a>. It trains openAI gym MountainCar-v0 environment and provides the visualisazion after training.</p>
+
+<p style="text-align: justify;">And complete set of environments provided by OpenAI <a href="https://gym.openai.com/envs/#classic_control">here</a></p>
+
+<p style="text-align: justify;">In order to develop DEEP reinforcement learning algorithms, you will need to build artificial neural networks using a python library such as Keras, TensorFlow, or PyTorch:</p>
 
 ``` Shell
 pip install keras
@@ -116,8 +120,8 @@ tensorflow.org/install/pip
 </li>
 </ul>
 
-<p>This section is based on lamar university's cluster computer but general instructions can be used in other settings too. You need to arrange with the computer science department in order to access the cluster computer</p>
-<p>Once you loged in, you will need to load anaconda:</p>
+<p>This section is based on the Lamar University's cluster computer. But, general instructions can be used in other settings too. You need to arrange with the computer science department to access the cluster computer</p>
+<p>Once you logged in, you will need to load anaconda:</p>
 
 ``` Shell
 $ module load anaconda3/3.7
@@ -162,12 +166,12 @@ $ pip install joblib
 $ pip install click
 $ pip install tqdm
 ```
-<p>Finally run the following code to see if everything works properly. You should see the algorithm starts running without error.</p>
+<p>Finally, run the following code to see if everything works properly. You should see the algorithm starts running without error.</p>
 
 ``` Shell
 $ python baselines/deepq/experiments/train_cartpole.py
 ```
-<p>To see rendering envs (or any graphical windows from remove computer) you will need to install x11:</p>
+<p>To see the environments' rendering (or any graphical windows from the remote computer), you will need to install x11:</p>
 <p>Download and install xming using this link and make sure that it is running in your computer before connecting to the server</p>
 <p><a href="https://sourceforge.net/projects/xming/">https://sourceforge.net/projects/xming/</a></p>
 
@@ -177,7 +181,7 @@ $ python baselines/deepq/experiments/train_cartpole.py
 </li>
 </ul>
 
-<p>Up to this point you have everything you need to do simple projects in reinforcement learning, but, if you need to go deeper you can follow the following steps:</p>
+<p>Up to this point, you have everything you need to do simple projects in reinforcement learning, but, if you need to go deeper, you can follow the following steps:</p>
 
 <ul style="list-style-type: circle;">
 <li>
@@ -190,7 +194,7 @@ $ python baselines/deepq/experiments/train_cartpole.py
 <p>You will need to install anaconda as it is explained in the previous section.</p>
 <p>A C++ compiler is needed to be installed. You can find the "community" version from the following:</p>
 <p><a href="https://visualstudio.microsoft.com/downloads/">visualstudio.microsoft.com/downloads/</a></p>
-<p>run Anaconda Power Shell, on your local machine. You can search "anaconda prompt" on your system. Like the previous section. Create an environemnt and then activate it.</p>
+<p>run Anaconda Power Shell, on your local machine. You can search "anaconda prompt" on your system. Like the previous section. Create an environment and then activate it.</p>
 
 ``` Shell
 $ conda create -n NewEnv
@@ -201,7 +205,7 @@ $ conda activate NewEnv
 ``` Shell
 $ conda install git
 ```
-<p>Install the libraries that are required for atari environemnts:</p>
+<p>Install the libraries that are required for atari environments:</p>
 
 ``` Shell
 $ pip install git+https://github.com/Kojoley/atari-py.git
@@ -236,7 +240,7 @@ $ pip install -e .
 ``` Shell
 $ python baselines/deepq/experiments/train_cartpole.py
 ```
-<p>To see a trained cartpole, run:</p>
+<p>To see a trained CartPole, run:</p>
 
 ``` Shell
 $ python baselines/deepq/experiments/enjoy_cartpole.py
@@ -245,7 +249,7 @@ $ python baselines/deepq/experiments/enjoy_cartpole.py
 <p><a href="https://arztsamuel.github.io/en/blogs/2018/Gym-and-Baselines-on-Windows.html">arztsamuel.github.io/en/blogs/2018/Gym-and-Baselines-on-Windows.html</a></p>
 
 
-<p>OpenAI baselines provides an interface to run different algorithms using different setting. The general command required for running the algorithms is:</p>
+<p>OpenAI baselines provides an interface to run different algorithms using different settings. The general command required for running the algorithms is:</p>
 
 ``` Shell
 $ python -m baselines.run --alg= name_of_the_algorithm  --env=environment [additional arguments]
@@ -255,8 +259,8 @@ $ python -m baselines.run --alg= name_of_the_algorithm  --env=environment [addit
 ``` Shell
 $ python -m baselines.run --alg=deepq --env=CartPole-v1 --network=mlp --num_timesteps=5e6 --num_hidden=32 --save_path=~/models/deepq5e6_01 --log_path=~/logs/deepq5e6_01/ --lr=1e-3&nbsp; --buffer_size=50000 --seed=0</p>
 ```
-<p>This command, trains an DQN (deepq) agent, on CartPole-v1 environment. The structure of the network will be mlp (multi layer perceptron), the algorithm wili be run for 5e6 time steps, the number of hidden nodes of mlp is 32. It saves the model (the agent's model) in save path, logs the results on log_path, uses learning rate 1e-3, replay buffer size 50000, and random seed 0.</p>
+<p>This command trains an DQN (deepq) agent, on CartPole-v1 environment. The structure of the network will be mlp (multi layer perceptron), the algorithm will be run for 5e6 time steps, the number of hidden nodes of mlp is 32. It saves the model (the agent's model) in save path, logs the results on log_path, uses learning rate 1e-3, replay buffer size 50000, and random seed 0.</p>
 <p>You should be familiar with DQN before understanding most of these terms.</p>
-<p>You can refer to these documents for how to save the model, Logging, and visyualizing the results:</p>
+<p>You can refer to these documents for how to save the model, Logging, and visualizing the results:</p>
 <p><a href="https://github.com/openai/baselines">https://github.com/openai/baselines</a></p>
 <p><a href="https://github.com/openai/baselines/blob/master/docs/viz/viz.ipynb">https://github.com/openai/baselines/blob/master/docs/viz/viz.ipynb</a></p>
